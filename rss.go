@@ -77,6 +77,7 @@ type RssItem struct {
 	Guid        string `xml:"guid,omitempty"`    // Id used
 	PubDate     string `xml:"pubDate,omitempty"` // created or updated
 	Source      string `xml:"source,omitempty"`
+	WFWComments string `xml:"wfw:commentRss`
 }
 
 type RssEnclosure struct {
