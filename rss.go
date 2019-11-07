@@ -15,6 +15,7 @@ type RssFeedXml struct {
 	XMLName          xml.Name `xml:"rss"`
 	Version          string   `xml:"version,attr"`
 	ContentNamespace string   `xml:"xmlns:content,attr"`
+	WFWNamespace     string   `xml:"xmlns:wfw,attr"`
 	Channel          *RssFeed
 }
 
@@ -165,5 +166,6 @@ func (r *RssFeed) FeedXml() interface{} {
 		Version:          "2.0",
 		Channel:          r,
 		ContentNamespace: "http://purl.org/rss/1.0/modules/content/",
+		WFWNamespace:     "http://wellformedweb.org/CommentAPI/",
 	}
 }
